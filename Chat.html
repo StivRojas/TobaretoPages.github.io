@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo4.css">
+        <link rel="shortcut icon" href="../Manual/imagenes/iconocarita.ico"
+            type="image/x-icon">
+        <title>Pagina inicial</title>
+    </head>
+    <body>
+        <header> <img src="../Manual/imagenes/Header1-removebg-preview.png"
+                alt="header" height="85%"></header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Chat.html">Chat</a></li>
+                <li><a href="tutor.html">tutor LPP</a></li>
+                <li><a href="Flotantes.html">Float</a></li>
+                <li><a href="Consulta.html">Consulta</a></li>
+                <li><a href="Transiciones.html">Transiciones</a></li>
+                <li><a href="Columnas.html">Columnas</a></li>
+                <li><a href="Audio.html">Audio</a></li>
+                <li><a href="Degradados.html">Deg</a></li>
+                <li><a href="Animaciones.html">Animaciones</a></li>
+                <li><a href="SVG.html">SVG</a></li>
+                <li><a href="Canvas.html">Canvas</a></li>
+                <li><a href="moviles.html">Moviles</a></li>
+                <li><a href="Editables.html">Edit Content</a></li>
+                <li><a href="Formulario.html">Form</a></li>
+            </ul>
+        </nav>
+
+        <h1>CHAT</h1>
+        <div class="chatbot-bubble" onclick="toggleChatbot()">💬</div>
+        <div class="chatbot-container" id="chatbot">
+            <div class="chatbot-header">Chatbot 🤖</div>
+            <div class="chatbot-body" id="chatBody"></div>
+            <div class="chatbot-buttons" id="chatButtons">
+                <button onclick="sendMessage('¿Qué es este chatbot?')">¿Qué es
+                    este chatbot?</button>
+                <button onclick="sendMessage('¿Cómo funciona?')">¿Cómo
+                    funciona?</button>
+                <button onclick="sendMessage('¿Qué tecnologías usas?')">¿Qué
+                    tecnologías usas?</button>
+                <button
+                    onclick="sendMessage('Dame un consejo de programación')">Dame
+                    un consejo</button>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatInput"
+                    placeholder="Escribe un mensaje...">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+
+        <script src="../Manual/JavaScripts/scriptChatbot.js" defer></script>
+
+    </body>
+</html>

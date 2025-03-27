@@ -1,0 +1,338 @@
+header {
+    background-color: #333;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav {
+    width: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(50, 50, 50, 0.8));
+    overflow: auto;
+    /* Permite desplazamiento si hay muchos elementos */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos pasen a una nueva línea si es necesario */
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    /* Reducimos un poco el tamaño */
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    /* Reducimos el padding para que ocupen menos espacio */
+    color: #FFF;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap;
+    /* Evita que el texto se divida en dos líneas */
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #eca023;
+    left: 50%;
+    bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+nav ul li:hover a {
+    color: #eca023;
+}
+
+nav ul li:hover::after {
+    width: 80%;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-page {
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el carrusel */
+.carousel-inner {
+    max-height: 400px;
+    /* Altura máxima en lugar de fija */
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    object-fit: contain;
+    /* Muestra toda la imagen sin recortar */
+    max-height: 400px;
+}
+
+/* Ajustes para la tabla */
+.table td {
+    vertical-align: middle;
+    /* Centra el contenido verticalmente */
+}
+
+/* Ajustes para el video */
+lite-youtube {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.tituloColumnas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+#columnas {
+    column-count: 4;
+    column-gap: 20px;
+    column-rule: 4px dotted gray;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#columnas1 {
+    column-count: 4;
+    column-gap: 20px;
+    column-rule: 4px double black;
+    list-style: none;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+#columnas2 {
+    column-count: 4;
+    column-gap: 20px;
+    column-rule: 6px solid gray;
+    list-style: none;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#columnas3 {
+    column-count: 4;
+    column-gap: 20px;
+    column-rule: 6px dotted gray;
+    list-style: none;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#columnas4 {
+    column-count: 4;
+    column-gap: 20px;
+    column-rule: 6px dashed gray;
+    list-style: none;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#columnas5 {
+    column-count: 4;
+    column-gap: 20px;
+    column-rule: 6px double gray;
+    list-style: none;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#columnas6 {
+    column-count: 4;
+    column-gap: 20px;
+    column-rule: 6px groove gray;
+    list-style: none;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#columnas7 {
+    column-count: 4;
+    column-gap: 20px;
+    column-rule: 6px ridge gray;
+    list-style: none;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#columnas8 {
+    column-count: 4;
+    column-gap: 20px;
+    column-rule: 6px inset gray;
+    list-style: none;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#columnas9 {
+    column-count: 4;
+    column-gap: 20px;
+    column-rule: 6px outset gray;
+    list-style: none;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.container-audio {
+    padding: 25px;
+}
+
+#tabla-audio {
+    width: 50%; 
+    margin: 0 auto; 
+    border-collapse: collapse;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid #333;
+}
+
+#tabla-audio th,
+#tabla-audio td {
+    border: 1px solid #999;
+    padding: 10px;
+}
+
+#tabla-audio th {
+    background-color: #6b6b6b;
+    color: white;
+}
+
+#tabla-audio tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tabla-audio tr:hover {
+    background-color: #ddd;
+}
+
+#tabla-audio td:nth-child(2),
+#tabla-audio td:nth-child(3),
+#tabla-audio td:nth-child(4) {
+    font-weight: bold;
+}
+
+#tabla-audio td {
+    text-transform: uppercase;
+}
+
+.chatbot-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #eca023;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+}
+
+.chatbot-header {
+    background: #eca023;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chatbot-body {
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+.chatbot-input button {
+    background: #eca023;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.chatbot-message {
+    background: #f1f1f1;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: fit-content;
+}
+
+.chatbot-buttons button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin: 3px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}

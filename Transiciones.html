@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo2.css">
+        <link rel="shortcut icon" href="../Manual/imagenes/iconocarita.ico"
+            type="image/x-icon">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <title>Pagina inicial</title>
+    </head>
+    <body>
+        <header> <img src="../Manual/imagenes/Header1-removebg-preview.png"
+                alt="header" height="85%"></header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a
+                                href="PruebaIA - copia/frontend/index.html">tutor
+                                LPP</a></li>
+                        <li><a href="Flotantes.html">Float</a></li>
+                        <li><a href="Consulta.html">Consulta</a></li>
+                        <li><a href="Transiciones.html">Transiciones</a></li>
+                        <li><a href="Columnas.html">Columnas</a></li>
+                        <li><a href="Audio.html">Audio</a></li>
+                        <li><a href="Degradados.html">Deg</a></li>
+                        <li><a href="Animaciones.html">Animaciones</a></li>
+                        <li><a href="SVG.html">SVG</a></li>
+                        <li><a href="Editables.html">Edit Content</a></li>
+                        <li><a href="Formulario.html">Form</a></li>
+                    </ul>
+                </nav>
+        <div class="container-page">
+            <section>
+                <h1>Transiciones (transition)</h1>
+                <p>Las transiciones (transition) funcionan como pequeñas
+                    animaciones
+                    que siguen las mismas características que la etiqueta
+                    'transform' (cambio de posición, tamaño, rotación...) aunque
+                    con
+                    la capacidad de poder especificar una duración para que se
+                    produzca dicha transformación y así poder utilizarla como
+                    una
+                    animación sencilla.
+
+                    Para poder observar su funcionamiento vamos a utilizar un <
+                    div
+                    > llamado 'martillo' que contiene el dibujo de un martillo
+                    (en
+                    SVG).</p>
+                <div class="container">
+                    <div><img src="../Manual/imagenes/martillo.png"
+                            alt="martillo"></div>
+                    <div id="cajaTexto">
+                        <p>A este &lt;div&gt; le vamos a aplicar varias
+                            transiciones
+                            (de posición, tamaño y rotación) y para que podamos
+                            activar cada una de ellas en el momento que queramos
+                            deberás pasar el cursor por encima de cada ejemplo.
+                            Es muy importante tener en cuenta que para que
+                            'transition' funcione en todos los navegadores
+                            deberemos
+                            repetir la propiedad anteponiendo los prefijos de
+                            cada
+                            uno de los navegadores:
+                            <ul>
+                                <li>-webkit- (para Chrome y Safari)</li>
+                                <li>-moz- (para Firefox).</li>
+                                <li>-o- (para Opera)</li>
+                                <li>-ms- (para las versiones modernas de
+                                    Internet
+                                    Explorer)</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <h2>Transicion con múltiples propiedades</h2>
+                <div>
+                    <p>
+                        Para especificar el cambio de varias propiedades con
+                        diferentes tiempos para para cada una de ellas,
+                        únicamente
+                        tenemos que separar las diferentes propiedades con ",".
+
+                        Así, en este ejemplo, al pasar el cursor por encima, se
+                        producirán 6 cambios de propiedades al mismo tiempo:
+                        <ul class="lista-organizada">
+                            <li>El < div > martillo se moverá 400px hacia la
+                                derecha
+                                (utilizando 'left') en 1.5 segundos.</li>
+                            <li>El color de fondo ('background-color') del < div
+                                >
+                                martillo se convertirá en negro en 2
+                                segundos.</li>
+                            <li>La anchura del < div > se modificará hasta
+                                llegar a
+                                los 225 píxeles en 1 segundo.</li>
+                            <li>La altura del < div > se modificará hasta llegar
+                                a
+                                los 200 píxeles (empujando hacia abajo el
+                                contenido
+                                que le sigue) durante 1 segundo.</li>
+                            <li>El espacio que hay entre el extremo izquierdo
+                                del <
+                                div > y el dibujo que éste contiene
+                                ('padding-left')
+                                se expandirá hasta llegar a los 100 pixeles en 1
+                                segundo.</li>
+                            <li>El espacio que hay entre el extremo superior del
+                                <
+                                div > y el dibujo que éste contiene
+                                ('padding-top')
+                                se expandirá hasta llegar a los 20 pixeles en 1
+                                segundo.</li>
+                        </ul>
+                    </p>
+                </div>
+                <h2>Ejemplos</h2>
+                <h4>Primer Ejemplo</h4>
+                <hr>
+                <div id="contenedor-primer-ejemplo">
+                    <div id="martillo1">
+                        <img src="../Manual/imagenes/martillo.png"
+                            alt="Martillo1">
+                    </div>
+                </div>
+                <hr>
+                <h4>Segundo ejemplo</h4>
+                <div id="contenedor-segundo-ejemplo">
+                    <div id="martillo2">
+                        <img src="../Manual/imagenes/martillo.png"
+                            alt="Martillo2">
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <div class="chatbot-bubble" onclick="toggleChatbot()">💬</div>
+        <div class="chatbot-container" id="chatbot">
+            <div class="chatbot-header">Chatbot 🤖</div>
+            <div class="chatbot-body" id="chatBody"></div>
+            <div class="chatbot-buttons" id="chatButtons">
+                <button onclick="sendMessage('¿Qué es este chatbot?')">¿Qué es
+                    este chatbot?</button>
+                <button onclick="sendMessage('¿Cómo funciona?')">¿Cómo
+                    funciona?</button>
+                <button onclick="sendMessage('¿Qué tecnologías usas?')">¿Qué
+                    tecnologías usas?</button>
+                <button
+                    onclick="sendMessage('Dame un consejo de programación')">Dame
+                    un consejo</button>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatInput"
+                    placeholder="Escribe un mensaje...">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="../Manual/JavaScripts/scriptChatbot.js" defer></script>
+    </body>
+</html>

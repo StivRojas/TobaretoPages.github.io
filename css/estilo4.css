@@ -1,0 +1,326 @@
+header {
+    background-color: #333;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav {
+    width: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(50, 50, 50, 0.8));
+    overflow: auto;
+    /* Permite desplazamiento si hay muchos elementos */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos pasen a una nueva línea si es necesario */
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    /* Reducimos un poco el tamaño */
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    /* Reducimos el padding para que ocupen menos espacio */
+    color: #FFF;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap;
+    /* Evita que el texto se divida en dos líneas */
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #eca023;
+    left: 50%;
+    bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+nav ul li:hover a {
+    color: #eca023;
+}
+
+nav ul li:hover::after {
+    width: 80%;
+}
+
+.container-page {
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#imagenColores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cuadradoConOpacidad {
+    width: 60px;
+    height: 30px;
+    background-color: rgba(255, 0, 0, 0.4);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#cuadradoRojo {
+    width: 60px;
+    height: 30px;
+    background-color: rgba(255, 0, 0, 1);
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.contenedor-ejemplos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* Espacio entre ejemplos */
+}
+
+.ejemplo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    /* Espacio entre el título y el degradado */
+}
+
+
+.degradado {
+    float: left;
+    width: 600px;
+    height: 110px;
+    margin-bottom: 50px;
+    border-radius: 4px;
+}
+
+#cuadrado-con-degradado1 {
+    background: linear-gradient(to bottom, red, orange, yellow);
+}
+
+#cuadrado-con-degradado2 {
+    background: linear-gradient(30deg, crimson, sienna, royalblue, indianred, purple);
+}
+
+#cuadrado-con-degradado3 {
+    background: linear-gradient(to bottom, black 10%, orangered 75%, yellow);
+}
+
+.contenedor-radiales {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Espacio entre cada ejemplo */
+}
+
+.ejemplo1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.degradado1 {
+    width: 450px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+/* Ejemplo 1: closest-side */
+#cuadro-closest-side {
+    background: radial-gradient(circle closest-side at 100px 75px, red, yellow, black);
+}
+
+/* Ejemplo 2: farthest-side */
+#cuadro-farthest-side {
+    background: radial-gradient(circle farthest-side at 100px 75px, red, yellow, black);
+}
+
+/* Ejemplo 3: closest-corner */
+#cuadro-closest-corner {
+    background: radial-gradient(circle closest-corner at 100px 75px, red, yellow, black);
+}
+
+/* Ejemplo 4: farthest-corner */
+#cuadro-farthest-corner {
+    background: radial-gradient(circle farthest-corner at 100px 75px, red, yellow, black);
+
+}
+
+.contenedor-metalizados {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.ejemplo2 {
+    text-align: center;
+}
+
+.degradado2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* Metalizado 1 */
+#cuadro-metalizado1 {
+    background: radial-gradient(circle at center, black, #1162ac);
+}
+
+/* Metalizado 2 */
+#cuadro-metalizado2 {
+    background: radial-gradient(ellipse at 150px top, white, #1162ac, black);
+}
+
+/* Metalizado 3 */
+#cuadro-metalizado3 {
+    background: radial-gradient(ellipse at center, white 25%, peru 66%, black 96%);
+}
+
+#contenido-editable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#editable {
+    border: 2px dotted #a0a058;
+    background-color: #eef4cc;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    max-width: 400px;
+    /* Opcional, para que no se estire mucho */
+}
+
+#editable h2 {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 0;
+}
+
+#editable {
+    overflow: auto;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.chatbot-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #eca023;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+}
+
+.chatbot-header {
+    background: #eca023;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chatbot-body {
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+.chatbot-input button {
+    background: #eca023;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.chatbot-message {
+    background: #f1f1f1;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: fit-content;
+}
+
+.chatbot-buttons button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin: 3px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}

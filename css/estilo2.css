@@ -1,0 +1,348 @@
+header {
+    background-color: #333;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav {
+    width: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(50, 50, 50, 0.8));
+    overflow: auto;
+    /* Permite desplazamiento si hay muchos elementos */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos pasen a una nueva línea si es necesario */
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    /* Reducimos un poco el tamaño */
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    /* Reducimos el padding para que ocupen menos espacio */
+    color: #FFF;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap;
+    /* Evita que el texto se divida en dos líneas */
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #eca023;
+    left: 50%;
+    bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+nav ul li:hover a {
+    color: #eca023;
+}
+
+nav ul li:hover::after {
+    width: 80%;
+}
+
+.carousel-inner img {
+    height: 501px; /* Ajusta la altura según lo que necesites */
+    object-fit: cover; /* Para que las imágenes mantengan su proporción */
+}
+
+
+#overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    border-radius: 10px;
+}
+
+#overlay-text h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+#overlay-text p {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+hr {
+    border-width: 10px;
+    border-style: ridge;
+    border-color: #eca023;
+    width: auto;
+}
+
+/*div {
+    border-top: 3px solid red;
+    border-bottom: 5px solid green;
+    border-left: 5px solid blueviolet;
+    border-right: 5px solid blueviolet;
+}*/
+
+#bordeAzul {
+    border: 5px solid blue;
+    background-color: cornflowerblue;
+    height: 50px;
+    width: 300px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+#bordeIndividual {
+    height: 100px;
+    width: 300px;
+    border-radius: 10px 0px 39px 22px;
+}
+
+
+#caja1 {
+    border: 5px solid blue;
+    width: 200px;
+    float: left;
+    margin-right: 15px;
+}
+
+#caja2 {
+    border: 5px solid blue;
+    width: 300px;
+    float: left;
+}
+
+#caja3 {
+    width: 740px;
+    float: left;
+    margin-left: 15px;
+}
+
+.container {
+    display: flex;
+    /* Poner los elementos en línea */
+    align-items: center;
+    /* Alinear verticalmente */
+}
+
+.container img {
+    max-width: 200px;
+    /* Ajusta el tamaño de la imagen */
+    height: auto;
+}
+
+#cajaTexto {
+    width: 1200px;
+    margin-left: 15px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: auto;
+}
+
+h1,
+h2,
+h4 {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+p {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    /* Centrar horizontalmente */
+    align-items: center;
+    /* Centrar verticalmente */
+    height: 100px;
+    /* Ajusta según necesidad */
+}
+
+.lista-organizada {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.lista-organizada li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    border-left: 3px solid #555555;
+    padding-left: 15px;
+}
+
+#martillo1 {
+    width: 120px;
+    height: 170px;
+    left: 40px;
+    background-color: orange;
+    position: relative;
+    transition:
+        left 1.5s ease-in-out,
+        background-color 2s ease-in-out,
+        width 1s ease-in-out,
+        height 1s ease-in-out,
+        padding-left 1s ease-in-out,
+        padding-top 1s ease-in-out;
+    margin-bottom: 30px;
+    padding-left: 0;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#martillo1:hover {
+    position: relative;
+    left: 200px;
+    background-color: black;
+    width: 225px;
+    height: 200px;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+#martillo2 {
+    padding-left: 100px;
+    padding-right: 20px;
+    opacity: 1;
+    transition: opacity 1s ease-out 0.5s;
+}
+
+#martillo2:hover {
+    opacity: 0;
+}
+
+#martillo3 {
+    position: relative;
+    display: inline-block;
+}
+
+#martillo3:hover {
+    animation: animacion_martillo 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes animacion_martillo {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: 50% 100%;
+    }
+
+    100% {
+        transform: rotate(90deg);
+        transform-origin: 50% 100%;
+    }
+}
+
+.chatbot-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #eca023;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+}
+
+.chatbot-header {
+    background: #eca023;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chatbot-body {
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+.chatbot-input button {
+    background: #eca023;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.chatbot-message {
+    background: #f1f1f1;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: fit-content;
+}
+
+.chatbot-buttons button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin: 3px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}

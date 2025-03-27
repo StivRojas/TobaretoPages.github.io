@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo2.css">
+        <link rel="shortcut icon" href="../Manual/imagenes/iconocarita.ico"
+            type="image/x-icon">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <title>Pagina inicial</title>
+    </head>
+    <body>
+        <header> <img src="../Manual/imagenes/Header1-removebg-preview.png"
+                alt="header" height="85%"></header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a
+                                href="PruebaIA - copia/frontend/index.html">tutor
+                                LPP</a></li>
+                        <li><a href="Flotantes.html">Float</a></li>
+                        <li><a href="Consulta.html">Consulta</a></li>
+                        <li><a href="Transiciones.html">Transiciones</a></li>
+                        <li><a href="Columnas.html">Columnas</a></li>
+                        <li><a href="Audio.html">Audio</a></li>
+                        <li><a href="Degradados.html">Deg</a></li>
+                        <li><a href="Animaciones.html">Animaciones</a></li>
+                        <li><a href="SVG.html">SVG</a></li>
+                        <li><a href="Editables.html">Edit Content</a></li>
+                        <li><a href="Formulario.html">Form</a></li>
+                    </ul>
+                </nav>
+        <section>
+            <h1>Animaciones</h1>
+            <p>
+                De una manera parecida a las transiciones,
+                pero con una mayor potencialidad, en HTML5
+                tenemos a nuestra disposición las animaciones
+                (animation).
+            </p>
+            <p>
+                Para empezar con algo sencillo, primero vamos
+                a hacer paso a paso que el martillo (creado en SVG)
+                -y que ya hemos utilizado en otros temas- gire al
+                colocar el cursor encima.
+            </p>
+            <p>
+                <b>Sitúa el cursor encima del martillo</b> para ver la
+                animación.
+            </p>
+            <br>
+            <div id="martillo3">
+                <svg width="120" height="190"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="43" y="10" width="14" height="160" rx="6" ry="5"
+                        fill="#895111" />
+                    <rect x="43" y="10" width="14" height="160" rx="6" ry="5"
+                        fill="#895111" />
+                    <rect x="45" y="15" width="4" height="150" rx="6" ry="6"
+                        fill="#A68661" />
+                    <rect x="10" y="22" width="80" height="45" rx="14" ry="12"
+                        fill="#6E6E5F" />
+                    <rect x="20" y="37" width="62" height="24" rx="6" ry="6"
+                        fill="#898982" />
+                    <rect x="20" y="25" width="62" height="6" rx="4" ry="4"
+                        fill="#C2C2B6" />
+                    <rect x="43" y="67" width="14" height="9" fill="#482907" />
+                </svg>
+            </div>
+        </section>
+
+        <div class="chatbot-bubble" onclick="toggleChatbot()">💬</div>
+        <div class="chatbot-container" id="chatbot">
+            <div class="chatbot-header">Chatbot 🤖</div>
+            <div class="chatbot-body" id="chatBody"></div>
+            <div class="chatbot-buttons" id="chatButtons">
+                <button onclick="sendMessage('¿Qué es este chatbot?')">¿Qué es
+                    este chatbot?</button>
+                <button onclick="sendMessage('¿Cómo funciona?')">¿Cómo
+                    funciona?</button>
+                <button onclick="sendMessage('¿Qué tecnologías usas?')">¿Qué
+                    tecnologías usas?</button>
+                <button
+                    onclick="sendMessage('Dame un consejo de programación')">Dame
+                    un consejo</button>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatInput"
+                    placeholder="Escribe un mensaje...">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="JavaScripts/scriptChatbot.js"></script>
+    </body>
+</html>
